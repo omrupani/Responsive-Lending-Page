@@ -1,1 +1,100 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#navbar.scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+#navbar.scrolled .logo {
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+#navbar.scrolled .nav-links a {
+  color: #333;
+}
+
+.nav-links a:hover {
+  color: #007BFF;
+}
+
+/* Section styling */
+.section {
+  min-height: 100vh;
+  padding: 100px 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+#home { background-color: #333; color: #fff; }
+#features { background-color: #f4f4f4; color: #333; }
+#about { background-color: #ddd; color: #000; }
+#contact { background-color: #ccc; color: #000; }
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: none;
+    padding: 10px 20px;
+  }
+
+  .nav-links a {
+    color: #fff;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
