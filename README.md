@@ -3,6 +3,7 @@
 ✅ How to Use
 	
  1.	Save the three code blocks as:
+      
      •	index.html
 	    •	styles.css
 	    •	script.js
